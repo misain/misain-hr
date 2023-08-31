@@ -1,0 +1,280 @@
+:root {
+  --brand-color: #29569b;
+  --accent-color: #8f128f;
+  --font-family: "Montserrat", sans-serif;
+  --font-weight-300: 300;
+  --font-weight-400: 400;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+  --font-weight-900: 900;
+  --border-radius: 4px;
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+p {
+  font-weight: var(--font-weight-300);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: var(--font-weight-700);
+}
+
+/* -------- section.header -------- */
+header {
+  background-color: #FFFFFF;
+  position: sticky;
+  top: 0;
+  margin-bottom: 4rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+header nav {
+  display: flex;
+}
+header nav .logo {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 3rem;
+  /* font-weight: bold; */
+}
+header nav .logo:visited {
+  color: var(--brand-color);
+}
+header nav div {
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+header nav div a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  color: rgba(0, 0, 0, 0.8);
+  border-radius: 9999px;
+}
+header nav div a:hover {
+  text-decoration: 1px solid var(--brand-color);
+  background-color: var(--brand-color);
+  color: #FFFFFF;
+}
+
+/* -------- section.hero -------- */
+.hero {
+  text-align: center;
+  padding-inline: 1rem;
+}
+.hero h1 {
+  --font-size: 4.5rem;
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-900);
+  line-height: calc(var(--font-size) + 1rem);
+  margin-bottom: 4rem;
+}
+.hero p {
+  font-weight: var(--font-weight-300);
+  line-height: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+}
+.hero a {
+  display: inline-block;
+  background-color: var(--brand-color);
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+}
+
+/* -------- section.wrapper -------- */
+.wrapper {
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+.products {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+section {
+  margin-top: 5rem;
+}
+
+section h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.product {
+  max-width: 25rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(189, 189, 189, 0.3);
+  margin-top: 1.5rem;
+}
+.product h3 {
+  padding: 2rem;
+  font-size: 2rem;
+}
+.product p {
+  padding: 0 2rem 2rem 2rem;
+  line-height: 2;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block: 2rem;
+  background-color: rgb(253, 253, 253);
+}
+
+.contact-card {
+  padding: 3rem;
+  font-size: 1.2rem;
+}
+.contact-card h1 {
+  font-size: 2.5rem;
+  color: var(--brand-color);
+}
+.contact-card a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--brand-color);
+}
+.contact-card a:hover {
+  color: var(--accent-color);
+}
+
+.contact-info {
+  margin-top: 1.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 3rem;
+  border-top: 1px solid rgb(192, 192, 192);
+}
+footer p {
+  margin-top: 0.5rem;
+}
+
+.accent {
+  background-color: var(--brand-color);
+  color: #FFFFFF;
+  padding: 0 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+@media screen and (max-width: 800px) {
+  .hero h1 {
+    --font-size: 3rem;
+    font-size: var(--font-size);
+    font-weight: var(--font-weight-700);
+    line-height: calc(var(--font-size) + 1rem);
+  }
+  .products {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
